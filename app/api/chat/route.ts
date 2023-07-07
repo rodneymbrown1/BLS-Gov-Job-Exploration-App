@@ -3,8 +3,7 @@ import { OpenAIStream, StreamingTextResponse } from 'ai'
  
 // Create an OpenAI API client (that's edge friendly!)
 const config = new Configuration({
-  organization: 'org-297v3AjRS7K7LOsInspnOpsi',
-  apiKey: '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'
+  apiKey: process.env.OPEN_API_KEY
 })
 const openai = new OpenAIApi(config)
 console.log(JSON.stringify(config));
